@@ -22,7 +22,6 @@ public class WithDraw extends JFrame {
 
         WithDraw.addActionListener(e -> {
             try {
-                System.out.println(id);
                 try {
                     int amount = Integer.parseInt(textField1.getText());
                     if (amount < 0) {
@@ -34,7 +33,7 @@ public class WithDraw extends JFrame {
                             String name = rs.getString("fname");
                             int balance = rs.getInt("balance") - amount;
                             con.updateBalance(id, balance);
-                            System.out.println(name + " " + balance);
+                            JOptionPane.showMessageDialog(null, "Updated Balance: " + balance, "WithDraw Successful", JOptionPane.INFORMATION_MESSAGE);
                         }
                     }
 

@@ -21,7 +21,6 @@ public class Deposit extends JFrame {
 
         DepositButton.addActionListener(e -> {
             try {
-                System.out.println(id);
                 try {
                     int amount = Integer.parseInt(textField1.getText());
                     if (amount < 0) {
@@ -33,7 +32,7 @@ public class Deposit extends JFrame {
                             String name = rs.getString("fname");
                             int balance = rs.getInt("balance") + amount;
                             con.updateBalance(id, balance);
-                            System.out.println(name + " " + balance);
+                            JOptionPane.showMessageDialog(null, "Updated Balance: " + balance, "Deposit Successful", JOptionPane.INFORMATION_MESSAGE);
                         }
                     }
 
