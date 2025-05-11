@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="FinalProject:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/FinalProject_jar</output-path>
+    <root id="archive" name="FinalProject.jar">
+      <element id="module-output" name="FinalProject" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/sqlite-jdbc-3.49.1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jetbrains/annotations/26.0.2/annotations-26.0.2.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
