@@ -32,8 +32,12 @@ public class WithDraw extends JFrame {
                         if (rs.next()) {
                             String name = rs.getString("fname");
                             int balance = rs.getInt("balance") - amount;
-                            con.updateBalance(id, balance);
-                            JOptionPane.showMessageDialog(null, "Updated Balance: " + balance, "WithDraw Successful", JOptionPane.INFORMATION_MESSAGE);
+                            if (balance > 0){
+                                con.updateBalance(id, balance);
+                                JOptionPane.showMessageDialog(null, "Updated Balance: " + balance, "WithDraw Successful", JOptionPane.INFORMATION_MESSAGE);
+                            }else{
+                                JOptionPane.showMessageDialog(null, "Enter less amount, Balance can not be negative.");
+                            }
                         }
                     }
 
